@@ -1,14 +1,14 @@
-### Weekly Learning Summary 
-**Week Number: ** Week 2  
+#####Weekly Learning Summary 
+**Week Number:** Week 2  
 
-##**Week Topics **
+####**Week Topics**
 
 -Introduction to the Linux Kernel
 -Kernel Space and the User Space
 -Working with Hardware
 
 
-#Linux Kernel
+###-Linux Kernel
 The Kernel is the major component of an Operating system. It is like the engine of the OS.
 Kernel is the core interface between a computer hardware and its processes. Linux has a monolithic kernel but modular in implementation. 
 
