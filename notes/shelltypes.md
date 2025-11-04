@@ -20,4 +20,13 @@ Kernel is the core interface between a computer hardware and its processes. Linu
 
 *Figure 1: How the Linux kernel communicates with CPU, memory, devices, and applications.*
 
+## Kernel Task
+There are four major task for the linux command
+
+- **Memory Management**: Linux kernel keeps track of how much memoory is used to store what and where.
+- **Process Management**: Determines which processes can use the CPU, when and for how long it will last.
+- **Device Drivers**: Linux kernel also acts as a mediator or interpreter between the hardware devices and your application processes.
+- **System Calls and Security**: It receives requests for Services from the applications processes, it runs it and returns results.Before the kernel also runs a task, it check permissions and access controls
+
+
 
