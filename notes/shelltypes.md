@@ -7,8 +7,7 @@
 - Kernel Space and the User Space
 - Working with Hardware
 
-
-### Linux Kernel
+## Linux Kernel
 The Kernel is the major component of an Operating system. It is like the engine of the OS.
 Kernel is the core interface between a computer hardware and its processes. Linux has a monolithic kernel but modular in implementation. 
 
@@ -28,5 +27,19 @@ There are four major task for the linux command
 - **Device Drivers**: Linux kernel also acts as a mediator or interpreter between the hardware devices and your application processes.
 - **System Calls and Security**: It receives requests for Services from the applications processes, it runs it and returns results.Before the kernel also runs a task, it check permissions and access controls
 
+## Kernel Version
+Kernel Version refers to the specific version of a Linux kernel running on your system. It tells about fixtures, bugs and hardware supports.
+
+To see your kernel version
+
+- uname -r or uname -a
+
+* Typical Kernel version 
+4.15.0.72-generic
+
+- 4 : Kernel Version(Major Version) it defines significant change or update in kernel
+- 15 : Minor Version.These are small update, small features and performance upates.
+- 0 : Patch Version.These are bugs fixes and security updates
+- 72-generic: It is the Distribution spefic identifiers. It show the distro in charge of the kernel. A linux distro is a complete operating system built around the linux kernel. To differentiate between the two: A linux distro is like a car that is runned by an engine which is the kernel.  
 
 
