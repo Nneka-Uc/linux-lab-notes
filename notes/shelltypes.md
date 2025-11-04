@@ -16,7 +16,7 @@ Kernel is the core interface between a computer hardware and its processes. Linu
 
 - When I said that Linux has modular capabilities, I mean that its part can be dynamically loaded and managed. For instance, you add or remove parts without rebuilding the whole machine. You plug a new USB driver in a file system and its automatically loaded and when its removed, its unloaded without reloading the system.
 
-![Linux Kernel Diagram](images/.Linuxkernel.png)
+![Linux Kernel Diagram](../images/.Linuxkernel.png)
 
 *Figure 1: How the Linux kernel communicates with CPU, memory, devices, and applications.*
 
