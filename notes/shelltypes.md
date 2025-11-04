@@ -34,7 +34,7 @@ To see your kernel version
 
 - uname -r or uname -a
 
-* Typical Kernel version 
+# Typical Kernel version 
 
 **4.15.0.72-generic**
 
