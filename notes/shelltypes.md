@@ -1,7 +1,7 @@
-##### Weekly Learning Summary 
-#### **Week Number:** Week 2  
+# Weekly Learning Summary 
+# **Week Number:** Week 2  
 
-#### **Week Topics**
+# **Week Topics**
 
 - Introduction to the Linux Kernel
 - Kernel Space and the User Space
@@ -34,7 +34,7 @@ To see your kernel version
 
 - uname -r or uname -a
 
-# Typical Kernel version 
+###### Typical Kernel version 
 
 **4.15.0.72-generic**
 
