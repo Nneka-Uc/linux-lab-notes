@@ -46,4 +46,16 @@ To see your kernel version
 
  72-generic: It is the Distribution spefic identifiers. It show the distro in charge of the kernel. A linux distro is a complete operating system built around the linux kernel. To differentiate between the two: A linux distro is like a car that is runned by an engine which is the kernel.  
 
+## Memory management in Linux 
+Memory in linux is divided into two areas,
+- **Kernel Space**
+- **User Space**
 
+### Kernel Space: It is the portion of memory in which the kernel executes and provides its services. A process running in the kernel space has unrestricted access to the hardware. It means by design kernel space has full system privileges and can access every memory unlike the userspace. It is reserved for running the kernel codes kernel extensions and device drivers. The Kernel space and user space are seperated to ensure security and stability. The kernel ensures you have the right permission to access the hardware and also prevent crashing of the total system incase the user space crashes.
+
+### User Space: It is reserved for running processes outside the kernel. It is restricted to access the CPU and memory. Most Unix like Operating System, including linux come prepared with all kind of utilies, programming languages and graphical tools called User space application(User Land). Examples are User Space application programs written in C, Javascript, Java, Python etc. Note that User Space can only access its own memory. One would ask if this two spaces are seperated then how do they communicate together. Well User programs functions by manipulating data that are stored in the memory or disk. User Programs get access to this data by sending request to the Kernel  using SYSTEM CALLS. However we should note that not all user space programs makes system calls to the kernel.
+
+## Examples of Programs that runs on userspace, kernel space and the one that require system calls
+| User Space Process | Kernel Space Process | System Calls Process |
+|--------------------|----------------------|----------------------|
+|Web browser, text editor, game, calculator | OS kernel thread, device drivers, scheduler | read(), write(), open(), fork() | 
