@@ -1,7 +1,7 @@
-# Weekly Learning Summary 
-# **Week Number:** Week 2  
+# Linux Shell
+- **Week Number:** Week 2  
 
-# **Week Topics**
+## **Week Topics**
 
 - Introduction to the Linux Kernel
 - Kernel Space and the User Space
