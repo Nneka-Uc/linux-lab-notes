@@ -17,7 +17,7 @@ This is a learning plan for my journey towards platform engineer. It consist of 
 ## Learning Plan 
 
 ### Linux
-[Linux for Beginners](https://learn.kodekloud.com/user/courses/learning-linux-basics-course-labs)
+- [Linux for Beginners](https://learn.kodekloud.com/user/courses/learning-linux-basics-course-labs)
 
 ### Linux Project
 
