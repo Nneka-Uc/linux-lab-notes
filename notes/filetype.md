@@ -37,4 +37,4 @@ e. **Named Pipes**: A special type of file that allows connecting one process as
     `file filename` or `ls -l filename`
 for ls -l filename , the first character indicates the type of file.
 
-![file system characters](../image/'file type.png')
+![file system characters](../image/filetype.png)
