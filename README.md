@@ -19,6 +19,7 @@ This is a learning plan for my journey towards platform engineer. It consist of 
 ### Linux
 - [Linux for Beginners](https://learn.kodekloud.com/user/courses/learning-linux-basics-course-labs)
 - [Introduction to the Linux Shell](https://github.com/Nneka-Uc/linux-lab-notes/blob/main/notes/shelltypes.md)
+- [File type in linux](https://github.com/Nneka-Uc/linux-lab-notes/blob/main/notes/filetype.md)
 
 ### Linux Project
 
