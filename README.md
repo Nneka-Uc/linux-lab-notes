@@ -5,7 +5,8 @@ This is a learning plan for my journey towards platform engineer. It consist of 
 ## Goal 
 
 - Get a System Administration Job and move to Devop and then Platform engineer or SRE
-- Learn Linux (Build Linux projects) 
+- Learn Linux (Build Linux projects)
+  - [user account, groups and permission](https://github.com/Nneka-Uc/linux-lab-notes/blob/main/notes/user-groups-permission.md)
 - Learn Bash Scripting (Writing Scripts for Automation)
 - Learn Go or Python 
 - Learn Docker
