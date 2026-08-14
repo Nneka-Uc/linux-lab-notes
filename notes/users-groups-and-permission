@@ -4,8 +4,8 @@
 - Service Account: Each service has its own account and used in running the service. it helps isolation and security purpose.
 
 ## Comparism between Windows and Linux
-*Windows* has a centrally managed User with the help of Active Directory.
-In *Linux* users are managed locally. each server has its own user
+**Windows** has a centrally managed User with the help of Active Directory.
+In **Linux** users are managed locally. each server has its own user
 
 ## Why have multiple Users 
 - Allow permission prt team
@@ -13,13 +13,13 @@ In *Linux* users are managed locally. each server has its own user
 - Traceability
 
 ## Permission Level
--User Level Permission: permission given to a User
--Group Level Permission: Permission given to users that belong to a particular group
+- User Level Permission: permission given to a User
+- Group Level Permission: Permission given to users that belong to a particular group
 
 ## Access Control files in Linux
-/etc/passwd: shows avaliable users in a Linux server(username :pasword(x): UID :GID: Gecos : home directory : default shell
-/etc/group: shows users group
-/etc/shadow: shows users password
+`/etc/passwd `: shows avaliable users in a Linux server(username :pasword(x): UID :GID: Gecos : home directory : default shell
+`/etc/group `: shows users group
+`/etc/shadow `: shows users password
 
 NB: Root user has a user Id of 0 and group Id of 0
 
