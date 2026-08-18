@@ -1,0 +1,132 @@
+# Linux Group Permissions: Accessing Shared Files
+
+## Problem
+
+I created a directory/file under my home directory:
+
+```bash
+/home/nneka/script
+```
+
+The file was owned by `nneka` and assigned to the `devop` group. The intention was to allow users in the `devop` group, such as `dubem`, to read and execute the file.
+
+However, when `dubem` tried to access the file, access was denied.
+
+## Investigation
+
+I checked the file permissions:
+
+```bash
+ls -l /home/nneka/script
+```
+
+The file had permissions that allowed the `devop` group to read and execute it.
+
+I then checked the permissions of the parent directory:
+
+```bash
+ls -ld /home/nneka
+```
+
+The problem was that `dubem` also needed execute (`x`) permission on `/home/nneka` in order to traverse the directory and reach the file.
+
+This demonstrated that having permission on a file is not enough when the file is located inside another user's home directory.
+
+## Why the Problem Happened
+
+Linux permissions are evaluated at each level of the path.
+
+For:
+
+```text
+/home/nneka/script
+```
+
+the user needs appropriate permissions to traverse each directory in the path:
+
+```text
+/
+└── home
+    └── nneka
+        └── script
+```
+
+The `x` permission on a directory allows a user to traverse it.
+
+Therefore, giving the `devop` group access to `/home/nneka/script` while keeping `/home/nneka` completely private creates an access conflict.
+
+## Solution
+
+Instead of exposing my home directory to the `devop` group, I created a dedicated shared directory:
+
+```bash
+sudo mkdir /opt/devop
+```
+
+I assigned the directory to the `devop` group:
+
+```bash
+sudo chown nneka:devop /opt/devop
+```
+
+I then configured group access:
+
+```bash
+sudo chmod 2770 /opt/devop
+```
+
+The resulting permissions are approximately:
+
+```text
+drwxrws--- nneka devop /opt/devop
+```
+
+Now members of the `devop` group can work inside `/opt/devop` without requiring access to `/home/nneka`.
+
+## Verification
+
+I verified the group membership:
+
+```bash
+id dubem
+```
+
+Then I tested access as `dubem`:
+
+```bash
+ls -la /opt/devop
+```
+
+The shared directory was accessible to members of the `devop` group.
+
+## What I Learned
+
+1. File permissions and directory permissions are different.
+2. A user can have permission on a file but still be unable to access it if they cannot traverse one of the parent directories.
+3. Directory `x` permission allows a user to traverse the directory and access entries within it.
+4. Group membership does not automatically grant access. The group's permission bits must grant the required access.
+5. A user's home directory should generally remain private rather than being used as a shared workspace.
+6. Shared resources are better placed in a dedicated system directory such as `/opt/devop` when appropriate.
+7. The setgid bit (`2` in `2770`) can be used on a directory so that newly created files and directories inherit the directory's group.
+
+## Key Linux Concepts Practiced
+
+```text
+Users
+Groups
+File ownership
+Directory ownership
+Read / write / execute permissions
+Directory traversal
+chmod
+chown
+setgid
+Access control
+Shared directories
+```
+
+## Key Takeaway
+
+> **Group access to a file does not bypass the permissions of the directories containing that file.**
+
+For shared resources, I should design the directory structure around the intended access model instead of modifying permissions on my personal home directory.
