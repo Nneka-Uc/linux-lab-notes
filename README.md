@@ -27,6 +27,7 @@ This is a learning plan for my journey towards platform engineer. It consist of 
 
 ### Shell Scripting
 ### Shell Scripting Projects
+[create a new user and add it to a group](https://github.com/Nneka-Uc/linux-lab-notes/blob/main/script/create_new_user.sh)
 ### Learn Go
 ### Docker
 
