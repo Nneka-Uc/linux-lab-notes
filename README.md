@@ -8,6 +8,7 @@ This is a learning plan for my journey towards platform engineer. It consist of 
 - Learn Linux (Build Linux projects)
   - [user account, groups and permission](https://github.com/Nneka-Uc/linux-lab-notes/blob/main/notes/user-groups-permission.md)
   - [problem encountered while working with permission](https://github.com/Nneka-Uc/linux-lab-notes/blob/main/notes/permission-issues-encountered)
+  - [snap not working after installation](https://github.com/Nneka-Uc/linux-lab-notes/blob/main/notes/package_install_with_snap.md)
 - Learn Bash Scripting (Writing Scripts for Automation)
 - Learn Go or Python 
 - Learn Docker
